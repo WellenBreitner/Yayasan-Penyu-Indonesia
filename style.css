@@ -1,7 +1,10 @@
 :root {
-    --color1-color: #497d74;
-    --color2-color: #71bbb2;
-    --color3-color: #efe9d5;
+    --color1-color: #026d77;
+    --color2-color: #28b6ae;
+    --color3-color: #74cfc2;
+    --color4-color: #a4dfdb;
+    --color5-color: #fbf5c9;
+    --fontColor-color: #033b44;
     --white-color: #f8fafc;
     --black-color: black;
     --font-font: Arial, Helvetica, sans-serif;
@@ -11,8 +14,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
+/*header*/
 header {
     width: 100%;
     height: 100vh;
@@ -44,7 +49,7 @@ header .content h1 {
 header .bottom-box {
     width: 100%;
     padding: 20px;
-    color: var(--color1-color);
+    color: var(--fontColor-color);
     font-family: var(--font-font);
     font-size: 20px;
     font-weight: bold;
@@ -57,16 +62,19 @@ header .line {
     height: 4px;
     margin-bottom: 20px;
     margin: 0 auto 20px auto;
-    background-color: var(--color1-color);
+    background-color: var(--fontColor-color);
     border-radius: 20px;
 }
 
+/*navigation*/
 nav {
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: var(--color1-color);
+    position: fixed;
+    z-index: 1;
 }
 
 nav .nav_logo {
@@ -100,7 +108,7 @@ nav .nav_donate_button {
     font-family: var(--font-font);
     font-size: 15px;
     font-weight: bold;
-    background-color: var(--color3-color);
+    background-color: var(--color5-color);
 }
 
 nav .nav_donate_button a {
@@ -108,25 +116,51 @@ nav .nav_donate_button a {
     text-decoration: none;
 }
 
-/* nav .nav_donate_button:hover {
-    background-color: var(--color2-color);
-    color: var(--color3-color);
-    transition: 0.5s;
-} */
-
+/*main*/
 main {
     height: 100vh;
+    font-family: var(--font-font);
+    margin: 0 24px;
 }
 
-main .section1 {
+main .about {
     width: 100%;
     height: 100%;
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
+    font-family: var(--font-font);
+    color: var(--fontColor-color);
 }
 
-main .section1 h1 {
-    font-size: 100px;
-    font-family: var(--font-font);
+main .about h1 {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+main .about .about-content {
+    width: 50%;
+    height: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+main .about .about-content-img {
+    width: 50%;
+    height: 100%;
+    display: grid;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+main .about .about-content-img img {
+    width: 85%;
+    height: 40%;
+    display: block;
+    margin: auto 0;
+    margin: 0 auto;
 }
