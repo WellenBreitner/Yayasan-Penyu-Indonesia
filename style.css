@@ -15,6 +15,7 @@
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
+    font-family: var(--font-font);
 }
 
 /*header*/
@@ -46,7 +47,7 @@ header .content h1 {
     text-align: center;
 }
 
-header .bottom-box {
+header .bottom-content {
     width: 100%;
     padding: 20px;
     color: var(--fontColor-color);
@@ -60,8 +61,7 @@ header .bottom-box {
 header .line {
     width: 100px;
     height: 4px;
-    margin-bottom: 20px;
-    margin: 0 auto 20px auto;
+    margin: 0 auto .5rem auto;
     background-color: var(--fontColor-color);
     border-radius: 20px;
 }
@@ -80,7 +80,7 @@ nav {
 nav .nav_logo {
     width: 100px;
     height: 50px;
-    margin: 10px 0px;
+    margin: .5rem 1rem;
 }
 
 nav .nav-links {
@@ -91,7 +91,7 @@ nav .nav-links {
 }
 
 nav ul li a {
-    margin: 20px;
+    margin: .5rem 1rem;
     font-size: 20px;
     font-family: var(--font-font);
     font-weight: bold;
@@ -102,7 +102,7 @@ nav ul li a {
 nav .nav_donate_button {
     width: 100px;
     height: 40px;
-    margin: 8px;
+    margin: .5rem 1rem;
     border: none;
     border-radius: 20px;
     font-family: var(--font-font);
@@ -116,11 +116,12 @@ nav .nav_donate_button a {
     text-decoration: none;
 }
 
+
 /*main*/
 main {
     height: 100vh;
-    font-family: var(--font-font);
-    margin: 0 24px;
+    padding: 0 2rem;
+    box-sizing: border-box;
 }
 
 main .about {
@@ -128,6 +129,7 @@ main .about {
     height: 100%;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     font-family: var(--font-font);
@@ -142,7 +144,6 @@ main .about h1 {
 main .about .about-content {
     width: 50%;
     height: 100%;
-    padding: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -151,7 +152,6 @@ main .about .about-content {
 main .about .about-content-img {
     width: 50%;
     height: 100%;
-    display: grid;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -159,8 +159,95 @@ main .about .about-content-img {
 
 main .about .about-content-img img {
     width: 85%;
-    height: 40%;
+    height: 60%;
     display: block;
-    margin: auto 0;
     margin: 0 auto;
+}
+
+section.program-location {
+    width: 100%;
+    height: 100vh;
+    padding: 0 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    background-color: var(--color4-color);
+}
+
+section.program-location div.program-location-img {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section.program-location img {
+    max-width: 50%;
+    min-width: 250px;
+    height: 200px;
+}
+
+section.program-location img.sumatra-img:hover,
+img.bali-img:hover,
+img.sulawesi-img:hover {
+    height: 200px;
+    opacity: 0.5;
+    transition: all 0.3s ease-in-out;
+}
+
+section.program-location .program-location-button-list {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+section.program-location .program-location-button-list .location-button {
+    width: 100%;
+    margin: 1rem 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: .5rem;
+}
+
+section.program-location .program-location-button-list .location-button button {
+    border: none;
+    border-radius: .5rem;
+    padding: .5rem;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+section.program-location .program-location-button-list .location-button button:hover {
+    background-color: var(--color5-color);
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+section.program-location .program-location-button-list .location-button button:clicked {
+    background-color: var(--color5-color);
+
+}
+
+section.program-location .program-location-button-list .location-list {
+    width: 100%;
+    height: 50%;
+}
+
+section.program-location .program-location-button-list .location-list table {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+section.program-location .program-location-button-list .location-list table tr {
+    background-color: var(--white-color);
+    border-radius: .5rem;
 }

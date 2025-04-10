@@ -5,11 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yayasan Penyu Indonesia</title>
+    <script src="javascript/programLocation.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-
     <header>
         <nav>
             <img class="nav_logo" src="assets/image/ypi_logo.svg" alt="yayasan penyu indonesia logo">
@@ -30,7 +30,7 @@
         <div class="content">
             <h1>Yayasan Penyu Indonesia</h1>
 
-            <div class="bottom-box divider">
+            <div class="bottom-content">
                 <div class="line"></div>
                 <p>An initiative for the protection of the endangered sea<br>turtles</p>
             </div>
@@ -64,6 +64,35 @@
             </div>
         </section>
     </main>
+
+    <section class="program-location">
+
+        <div class="program-location-img">
+            <img class="sumatra-img location-img" src="assets/image/sumatra.svg">
+            <img class="sulawesi-img location-img" src="assets/image/sulawesi.svg">
+            <img class="bali-img location-img" src="assets/image/bali.svg">
+        </div>
+
+        <div class="program-location-button-list">
+            <div class="location-button">
+                <button class="sumatra-button" onclick="locationButtonOnclick('sumatra')"
+                    style=" width: 150px; height: 40px;">Sumatra</button>
+                <button class="sulawesi-button" onclick="locationButtonOnclick('sulawesi')"
+                    style="width: 150px; height: 40px;">Sulawesi</button>
+                <button class="bali-button" onclick="locationButtonOnclick('bali')"
+                    style="width: 150px; height: 40px;">Bali</button>
+
+            </div>
+            <div class="location-list">
+                <table class="location-table" border="1">
+                    <tr>
+                        <th>Location Name</th>
+                    </tr>
+                </table>
+
+            </div>
+        </div>
+    </section>
 
 </body>
 
