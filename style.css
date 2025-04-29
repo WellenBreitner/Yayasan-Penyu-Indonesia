@@ -18,6 +18,14 @@
     font-family: var(--font-font);
 }
 
+.title {
+    font-family: var(--font-font);
+    font-size: 30px;
+    font-weight: bold;
+    color: var(--fontColor-color);
+
+}
+
 /*header*/
 header {
     width: 100%;
@@ -132,13 +140,6 @@ main .about {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    font-family: var(--font-font);
-    color: var(--fontColor-color);
-}
-
-main .about h1 {
-    font-size: 30px;
-    font-weight: bold;
 }
 
 main .about .about-content {
@@ -250,4 +251,71 @@ section.program-location .program-location-button-list .location-list table {
 section.program-location .program-location-button-list .location-list table tr {
     background-color: var(--white-color);
     border-radius: .5rem;
+}
+
+section.our-program {
+    width: 100%;
+    height: 100vh;
+    padding: 0 2rem;
+}
+
+section.our-program dialog.program-dialog {
+    width: 80%;
+    height: 80%;
+    margin: auto;
+    padding: 4rem;
+    border: none;
+    background-color: var(--white-color);
+    border-radius: 20px;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+}
+
+::backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+}
+
+section.our-program dialog.program-dialog div.program-name {
+    width: 100%;
+    display: flex;
+    z-index: 1;
+    justify-content: space-between;
+    margin-bottom: 16px;
+}
+
+section.our-program div.program-list {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+section.our-program div.program {
+    width: 250px;
+    height: 300px;
+    padding: .5rem;
+    border-radius: 20px;
+    background-image: url(assets/image/perlindungan-penyu-dan-habitatnya-img.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-color: black;
+    white-space: initial;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    cursor: pointer;
+}
+
+section.our-program div.program h1 {
+    font-size: 20px;
+    color: var(--color5-color);
+}
+
+section.our-program div.program p {
+    font-size: 15px;
+    font-style: italic;
+    color: var(--white-color);
 }

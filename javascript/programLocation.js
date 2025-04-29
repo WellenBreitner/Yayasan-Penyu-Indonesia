@@ -2,7 +2,6 @@ function locationButtonOnclick(location) {
 
     const table = document.getElementsByClassName("location-table")[0];
 
-    console.log(table.rows.length);
     while (table.rows.length > 1) {
         table.deleteRow(1);
     }
@@ -63,7 +62,7 @@ function locationButtonOnclick(location) {
             break;
 
         case 'bali':
-            let baliLocationData = ["1. Berau"]
+            let baliLocationData = ["1. Denpasar"]
             const baliImageElement = document.getElementsByClassName("bali-img")[0];
             const baliButtonElement = document.getElementsByClassName(location + "-button")[0];
 
@@ -84,7 +83,16 @@ function locationButtonOnclick(location) {
 
 
     }
+}
 
+function dialogButton(open, programName) {
+    if (open == true) {
+        const dialog = document.getElementsByClassName("program-dialog")[0];
+        dialog.showModal();;
+    } else {
+        const dialog = document.getElementsByClassName("program-dialog")[0];
+        dialog.close();
+    }
 
 }
 
