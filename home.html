@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yayasan Penyu Indonesia</title>
+    <script src="javascript/home.js"></script>
+    <link rel="stylesheet" href="homeStyle.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <img class="nav_logo" src="assets/image/ypi_logo.svg" alt="yayasan penyu indonesia logo">
+
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#our-program">Blog</a></li>
+                <li><a href="#program-location">Take Action</a></li>
+            </ul>
+
+            <button class="nav_donate_button">
+                <a href="#">Donate</a>
+            </button>
+
+        </nav>
+    </header>
+
+    <main>
+        <section class="landing-page">
+            <h1>Yayasan Penyu Indonesia</h1>
+        </section>
+
+        <section class="about" id="about">
+            <div class="about-content scroll-fade">
+                <h1 class="title">Tentang Kami</h1>
+                <p>Yayasan Penyu Indonesia (YPI) resmi didirikan pada tahun 2018. Fokus kami adalah pada perlindungan
+                    penyu di habitat-habitat penting di Indonesia. Yayasan Penyu Indonesia merupakan bagian dari
+                    Asosiasi NGO Turtle Foundation yang bergerak di 7
+                    negara yaitu Indonesia, Jerman, Cabo Verde, Liechtenstein, Switzerland, UK, dan USA.</p>
+                <br>
+
+                <h1 class="title">Visi</h1>
+                <p>Masa depan di mana penyu dan habitatnya terlindungi secara berkelanjutan, sehat, dan aman dari
+                    ancaman kepunahan dan kerusakan.</p>
+                <br>
+
+                <h1 class="title">Misi</h1>
+                <p>Berkontribusi pada konservasi penyu di lokasi proyek kami dengan bekerja sama bersama masyarakat
+                    setempat untuk menciptakan masa depan di mana penyu dan manusia dapat berkembang.</p>
+            </div>
+            <div class="about-content-img scroll-fade">
+                <img src="assets/image/turtle.png" alt="turtle image">
+            </div>
+        </section>
+
+        <section class="our-program" id="our-program">
+            <dialog class="program-dialog">
+                <div class="program-name">
+                    <h1 class="title title-of-each-program">Program</h1>
+                    <img src="assets/image/closeIcon.svg" alt="close dialog" onclick="dialogButton(false)"
+                        style="cursor: pointer;">
+                </div>
+                <div class="program-content">
+                    <img class="program-image">
+                    <p class="program-description"></p>
+                </div>
+            </dialog>
+
+            <div class="program-list-title scroll-fade">
+                <h1 class="title our-program-title">Program Kami</h1>
+            </div>
+
+            <marquee behavior="scroll" scrollamount="15" direction="left" onmouseover="this.stop()"
+                onmouseout="this.start()">
+                <div class="program-list">
+
+                    <div class="program program-perlindungan" onclick="dialogButton(true, 'perlindungan')">
+                        <h1 class="title">Perlindungan Penyu dan Habitatnya</h1>
+                        <p>Click for more information*</p>
+                    </div>
+                    <div class="program program-penelitian" onclick="dialogButton(true, 'monitoring')">
+                        <h1 class="title">Monitoring & Penelitian</h1>
+                        <p>Click for more information*</p>
+                    </div>
+
+                    <div class="program program-pemberdayaan" onclick="dialogButton(true, 'pemberdayaan')">
+                        <h1 class="title">Pendampingan & Pemberdayaan</h1>
+                        <p>Click for more information*</p>
+                    </div>
+
+                    <div class="program program-edukasi" onclick="dialogButton(true, 'edukasi')">
+                        <h1 class="title">Edukasi Lingkungan</h1>
+                        <p>Click for more information*</p>
+                    </div>
+                </div>
+
+            </marquee>
+        </section>
+
+        <section class="program-location" id="program-location">
+
+            <div class="program-location-title scroll-fade">
+                <h1 class="title our-program-title">Lokasi Program</h1>
+            </div>
+
+            <div class="program-location-content scroll-fade">
+                <div class="program-location-img">
+                    <img class="location-img">
+                </div>
+
+                <div class="program-location-button-list scroll-fade">
+                    <div class="location-button">
+                        <button class="sumatra-button" onclick="locationButtonOnclick('sumatra')"
+                            style=" width: 150px; height: 40px;">Sumatra</button>
+                        <button class="sulawesi-button" onclick="locationButtonOnclick('sulawesi')"
+                            style="width: 150px; height: 40px;">Sulawesi</button>
+                        <button class="bali-button" onclick="locationButtonOnclick('bali')"
+                            style="width: 150px; height: 40px;">Bali</button>
+
+                    </div>
+                    <div class="location-list scroll-fade">
+                        <table class="location-table" border="1">
+                            <tr>
+                                <th class="table-head">Location Name</th>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <!-- <section class="video-visi-misi">
+        <video src="assets/video/video-profile-ypi.mp4" height="400" controls></video>
+
+        <div class="visi-misi">
+
+        </div>
+    </section> -->
+
+
+
+</body>
+
+</html>
