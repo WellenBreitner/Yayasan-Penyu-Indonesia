@@ -450,6 +450,10 @@ section.program-location .program-location-button-list .location-list table td {
         font-size: 2rem;
     }
 
+    nav {
+        display: none;
+    }
+
     section.about {
         height: 100vh;
     }
