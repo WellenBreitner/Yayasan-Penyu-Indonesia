@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,400;0,700;0,900;1,400&display=swap');
+
 :root {
     --color1-color: #026d77;
     --color2-color: #28b6ae;
@@ -7,7 +9,7 @@
     --white-color: #f8fafc;
     --black-color: black;
     --font-color: #1f2c3e;
-    --font-font: Arial, Helvetica, sans-serif;
+    --font-font: "Titillium Web", sans-serif;
 }
 
 * {
@@ -21,15 +23,27 @@
 .title {
     font-family: var(--font-font);
     font-size: 50px;
-    font-weight: bold;
-    color: var(--font-color);
+    font-weight: 700;
+    font-style: normal
+}
+
+.bold {
+    font-family: var(--font-font);
+    font-size: 50px;
+    font-weight: 900;
+    font-style: normal
+}
+
+.italic {
+    font-family: var(--font-font);
+    font-weight: 400;
+    font-style: italic;
 }
 
 /*header*/
 header {
     width: 100%;
     height: fit-content;
-
 }
 
 /*navigation*/
@@ -56,6 +70,48 @@ nav .nav-links {
     align-items: center;
 }
 
+.translate-dropdown {
+    position: relative;
+    display: inline-block;
+    margin: .5rem 1rem;
+    font-size: 20px;
+    font-family: var(--font-font);
+    font-weight: bold;
+    color: var(--white-color);
+    text-decoration: none;
+}
+
+.translate-box {
+    width: fit-content;
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 1px;
+    background-color: white;
+    z-index: 100;
+    border-radius: 6px;
+}
+
+.translate-dropdown:hover .translate-box {
+    display: block;
+}
+
+.goog-te-combo {
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: 1px solid whitesmoke;
+}
+
+nav .nav-links-mobile {
+    display: none;
+}
+
+nav .nav-links-mobile .burger_icon img {
+    width: 50px;
+    height: 40px;
+}
+
 nav ul li a {
     margin: .5rem 1rem;
     font-size: 20px;
@@ -65,30 +121,50 @@ nav ul li a {
     text-decoration: none;
 }
 
-nav .nav_donate_button {
-    width: 100px;
-    height: 40px;
-    margin: .5rem 1rem;
-    border: none;
-    border-radius: 20px;
+/* Dropdown Menu */
+div.nav-links-dropdown {
+    display: none;
+    width: calc(100% - 4rem);
+    height: fit-content;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    left: 2rem;
+    border-radius: 10px;
+    overflow: hidden;
+    z-index: 10;
+    text-align: center;
+    background-color: var(--color1-color);
+    font-size: 20px;
     font-family: var(--font-font);
-    font-size: 15px;
     font-weight: bold;
-    background-color: var(--color5-color);
+    color: var(--white-color);
+    text-decoration: none;
+    border: none;
 }
 
-nav .nav_donate_button a {
-    color: var(--font-font);
-    text-decoration: none;
+li.burger_icon {
+    list-style: none;
 }
+
+
+div.nav-links-dropdown a {
+    padding: 1rem 2rem;
+    text-decoration: none;
+    color: var(--white-color);
+    border-bottom: 1px solid #eee;
+}
+
+
 
 
 /*main*/
 main {
     width: 100%;
-    height: 100%;
+    height: auto;
     text-align: justify;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 /*landing page*/
@@ -132,10 +208,6 @@ section.about .about-content {
     display: flex;
     flex-direction: column;
     justify-content: center;
-}
-
-section.about .about-content p {
-    line-height: 2rem;
 }
 
 section.about .about-content-img {
@@ -314,7 +386,7 @@ section.program-location div.program-location-content {
 
 section.program-location div.program-location-img {
     width: 60%;
-    height: fit-content;
+    height: 100%;
 }
 
 section.program-location img {
@@ -395,10 +467,18 @@ section.program-location .program-location-button-list .location-list table td {
     }
 
     section.about {
-        height: 100vh;
+        height: auto;
         flex-direction: column-reverse;
         justify-content: center;
         align-items: center;
+    }
+
+    nav ul.nav-links {
+        display: none;
+    }
+
+    nav ul.nav-links-mobile {
+        display: unset;
     }
 
     section.about .about-content {
@@ -406,7 +486,7 @@ section.program-location .program-location-button-list .location-list table td {
     }
 
     section.our-program {
-        height: 100vh;
+        height: auto;
         justify-content: center;
     }
 
@@ -450,10 +530,6 @@ section.program-location .program-location-button-list .location-list table td {
         font-size: 2rem;
     }
 
-    nav {
-        display: none;
-    }
-
     section.about {
         height: 100vh;
     }
@@ -491,6 +567,27 @@ section.program-location .program-location-button-list .location-list table td {
     }
 
 }
+
+/* @media (orientation: landscape) {
+    section.about .about-content-img img {
+        display: none;
+    }
+
+    section.about {
+        height: auto;
+    }
+
+    section.our-program {
+        height: auto;
+    }
+
+    section.program-location {
+        height: auto;
+        padding: 0 2rem;
+    }
+
+} */
+
 
 /*animation*/
 .scroll-fade {

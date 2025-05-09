@@ -160,11 +160,59 @@ function dialogButton(open, programName) {
         }
     }
 
-
     if (open == true) {
         dialog.showModal();;
     } else {
         dialog.close();
+    }
+}
+
+let IsBurgerIconOpen = false
+function toggleDropdown() {
+    IsBurgerIconOpen = !IsBurgerIconOpen;
+    const dropdown = document.getElementById('navDropdown');
+
+    if (IsBurgerIconOpen) {
+        dropdown.style.display = "flex";
+    }
+    else {
+        dropdown.style.display = "none";
+    }
+
+    window.addEventListener('resize', function () {
+        if (window.innerWidth > 768) {
+            dropdown.style.display = 'none';
+            isDropdownOpen = false;
+        }
+    });
+}
+
+function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+        pageLanguage: 'id'
+    }, 'google_translate_element');
+}
+
+(function loadGoogleTranslateScript() {
+    const script = document.createElement('script');
+    script.type = 'text/javascript';
+    script.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
+    document.head.appendChild(script);
+})();
+
+function getPageFromLink(link) {
+    const home = document.getElementById("homePage");
+    const donate = document.getElementById("donatePage");
+
+    switch (link) {
+        case 'homePage':
+            home.style.display = "unset";
+            donate.style.display = "none";
+            break;
+        case 'donatePage':
+            home.style.display = "none";
+            donate.style.display = "unset";
+            break;
     }
 }
 
