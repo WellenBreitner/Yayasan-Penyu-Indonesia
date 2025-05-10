@@ -227,18 +227,6 @@ section.about .about-content-img img {
     margin: 0 auto;
 }
 
-/* section.video-visi-misi {
-    width: 100%;
-    height: 100vh;
-    padding: 0 2rem;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    gap: 2rem;
-    line-height: 2rem;
-    text-align: justify;
-} */
-
 /*our program section*/
 ::backdrop {
     background-color: rgba(0, 0, 0, 0.5);
@@ -503,7 +491,7 @@ section.donate-page-form {
     gap: 2rem;
 }
 
-section.donate-page-form form.donate-form {
+.form {
     max-width: 100%;
     max-height: 100%;
     display: flex;
@@ -528,7 +516,7 @@ section.donate-page-form form.donate-form textarea {
     border: none;
 }
 
-::placeholder {
+section.donate-page-form form.donate-form::placeholder {
     color: #7b7979;
 }
 
@@ -547,6 +535,137 @@ section.donate-page-form form.donate-form button {
     color: var(--white-color);
     border: none;
 }
+
+/* volunteer page*/
+section.volunteerPage {
+    width: 100%;
+    height: 100%;
+}
+
+section.volunteer-page-landing {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 2rem;
+    gap: 2rem;
+    background-image: url(assets/image/volunteer_landing.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: var(--white-color);
+}
+
+section.volunteer-page-landing h1 {
+    font-size: 80px;
+    font-family: var(--font-font);
+    color: var(--white-color);
+    text-align: center;
+    text-shadow: 1px 5px 10px rgba(0, 0, 0, 1);
+}
+
+section.volunteer-page-info {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    gap: 2rem;
+}
+
+div.volunteer-page-info-content {
+    max-width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2rem
+}
+
+div.info-content {
+    width: 250px;
+    max-height: fit-content;
+    text-align: justify;
+}
+
+div.info-content img {
+    max-width: 50%;
+    max-height: 500px;
+    text-align: justify;
+    display: block;
+    margin: 2rem auto;
+}
+
+div.info-content p.info-content-title {
+    text-align: center;
+    font-weight: bold;
+}
+
+section.volunteer-page-form {
+    width: 100%;
+    height: 100vh;
+    background-image: url(assets/image/volunteer_register.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 2rem;
+    gap: 2rem;
+}
+
+section.volunteer-page-form form.volunteer-form {
+    width: 40%;
+    height: 100%;
+}
+
+section.volunteer-page-form form.volunteer-form input {
+    width: 100%;
+    height: 50px;
+    field-sizing: content;
+    padding: 1rem;
+    border-radius: 10px;
+    font-size: 20px;
+    font-family: var(--font-font);
+    background-color: whitesmoke;
+    border: none;
+}
+
+section.volunteer-page-form form.volunteer-form::placeholder {
+    color: #7b7979;
+}
+
+section.volunteer-page-form form.volunteer-form button {
+    width: 100%;
+    height: 50px;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    font-style: normal;
+    background-color: var(--color1-color);
+    color: var(--white-color);
+    border: none;
+}
+
+
+
+/*footer*/
+footer {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color1-color);
+
+}
+
 
 /*table*/
 @media (max-width: 1024px) {
@@ -588,11 +707,6 @@ section.donate-page-form form.donate-form button {
         align-items: center;
     }
 
-    /* 
-    section.program-location div.program-location-content {
-        height: fit-content;
-    } */
-
     section.program-location div.program-location-content {
         height: fit-content;
         display: flex;
@@ -612,20 +726,22 @@ section.donate-page-form form.donate-form button {
     /*donation page*/
 
     section.donate-page-landing {
+        height: auto;
         display: flex;
         flex-direction: column-reverse;
         justify-content: center;
         align-items: center;
-        padding: 0 2rem;
+        padding: 2rem;
         gap: 2rem;
     }
 
     section.donate-page-form {
+        height: auto;
         display: flex;
         flex-direction: column-reverse;
         justify-content: center;
         align-items: center;
-        padding: 0 2rem;
+        padding: 2rem;
     }
 
     section.donate-page-landing img,
@@ -634,6 +750,25 @@ section.donate-page-form form.donate-form button {
         max-height: 100%;
         display: block;
         margin: 0 auto;
+    }
+
+    /*volunteer page*/
+
+    section.volunteer-page-info {
+        height: auto;
+    }
+
+    section.volunteer-page-form form.volunteer-form {
+        width: 100%;
+        height: auto;
+    }
+
+    section.volunteer-page-form {
+        width: 100%;
+        height: 100%;
+        background: none;
+        justify-content: center;
+        padding: 2rem;
     }
 }
 
@@ -644,7 +779,8 @@ section.donate-page-form form.donate-form button {
         font-size: 1.5rem;
     }
 
-    section.landing-page h1 {
+    section.landing-page h1,
+    div.volunteer-page-content h1 {
         font-size: 2rem;
     }
 
@@ -697,7 +833,7 @@ section.donate-page-form form.donate-form button {
     }
 
     section.donate-page-content,
-    section.donate-page-form form.donate-form {
+    .form {
         width: 100%;
     }
 
@@ -713,32 +849,10 @@ section.donate-page-form form.donate-form button {
         height: 80px;
     }
 
-    section.donate-page-form form.donate-form {
+    section.donate-page-form .form {
         gap: 0.8rem;
     }
 }
-
-
-
-/* @media (orientation: landscape) {
-    section.about .about-content-img img {
-        display: none;
-    }
-
-    section.about {
-        height: auto;
-    }
-
-    section.our-program {
-        height: auto;
-    }
-
-    section.program-location {
-        height: auto;
-        padding: 0 2rem;
-    }
-
-} */
 
 
 /*animation*/

@@ -203,15 +203,22 @@ function googleTranslateElementInit() {
 function getPageFromLink(link) {
     const home = document.getElementById("homePage");
     const donate = document.getElementById("donatePage");
-
+    const volunteer = document.getElementById("volunteerPage");
     switch (link) {
         case 'aboutPage':
             home.style.display = "unset";
             donate.style.display = "none";
+            volunteer.style.display = "none";
             break;
         case 'donatePage':
             home.style.display = "none";
             donate.style.display = "unset";
+            volunteer.style.display = "none";
+            break;
+        case 'volunteerPage':
+            home.style.display = "none";
+            donate.style.display = "none";
+            volunteer.style.display = "unset";
             break;
     }
 }
@@ -238,7 +245,20 @@ function getDonateData() {
         this.reset();
 
     });
+}
 
+function getVolunteerRegisterData() {
+    document.getElementById('volunteerForm').addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        const name = document.getElementById('volunteer_name').value.trim()
+        const email = document.getElementById('volunteer_email').value.trim()
+        const phone = document.getElementById('volunteer_phone').value.trim()
+        const age = document.getElementById('volunteer_age').value.trim()
+        const current_live = document.getElementById('volunteer_current_live').value.trim()
+
+        console.log('Data Volunteer:', { name, email, phone, age, current_live });
+    });
 }
 
 window.addEventListener("DOMContentLoaded", () => {

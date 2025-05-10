@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 
 <head>
     <meta charset="UTF-8">
@@ -19,6 +19,7 @@
                 <li><a href="#homePage">Home</a></li>
                 <li><a href="#aboutPage" onclick="getPageFromLink('aboutPage')">About</a></li>
                 <li><a href="#donatePage" onclick="getPageFromLink('donatePage')">Donate</a></li>
+                <li> <a href="#volunteer" onclick="getPageFromLink('volunteerPage')">Volunteer</a></li>
             </ul>
 
             <ul class="nav-links-mobile">
@@ -31,6 +32,8 @@
                 <a href="#homePage">Home</a>
                 <a href="#aboutPage" onclick="getPageFromLink('aboutPage')">About</a>
                 <a href="#donatePage" onclick="getPageFromLink('donatePage')">Donate</a>
+                <a href="#volunteer" onclick="getPageFromLink('volunteerPage')">Volunteer</a>
+
             </div>
 
             <div class="translate-dropdown">
@@ -150,7 +153,7 @@
             </section>
         </section>
 
-        <section class="donatePage scroll-fade" id="donatePage" style="display: none; box-sizing: border-box;">
+        <section class="donatePage scroll-fade" id="donatePage" style="display: none;">
             <section class="donate-page-landing">
                 <div class="donate-page-content">
                     <h1 class="bold" style="color: #026d77;">Your donation helps</h1>
@@ -164,19 +167,20 @@
             </section>
 
             <section class="donate-page-form">
-                <form class="donate-form scroll-fade" id="donationForm" method="post" target="_blank">
-                    <input type="text" id="name" name="name" placeholder="Nama" required />
+                <form class="donate-form scroll-fade form" id="donationForm" method="post" target="_blank">
+                    <input type="text" id="name" name="name" placeholder="Nama (contoh: John)" required />
 
-                    <input type="email" id="email" name="email" placeholder="Email" required />
+                    <input type="email" id="email" name="email" placeholder="Email (contoh: john@email.com)" required />
 
                     <input type="tel" id="phone" name="phone" required pattern="[0-9]{10,15}"
-                        placeholder="Nomor telepon" />
+                        placeholder="Nomor telepon (contoh:0812xxxxxxxx)" />
 
-                    <input type="text" id="country" name="country" required placeholder="Negara" />
+                    <input type="text" id="country" name="country" required placeholder="Negara (contoh: Indonesia)" />
 
                     <textarea id="message" name="message" placeholder="Pesan (Opsional)"></textarea>
 
-                    <input type="number" id="amount" name="amount" min="10000" placeholder="Jumlah" required />
+                    <input type="number" id="amount" name="amount" min="10000" placeholder="Jumlah (contoh: 10000)"
+                        required />
 
                     <button type="submit" onclick="getDonateData()">Donasi</button>
                 </form>
@@ -186,7 +190,97 @@
             </section>
 
         </section>
+
+        <section class="volunteerPage scroll-fade" id="volunteerPage" style="display: none;">
+            <section class="volunteer-page-landing">
+                <div class="volunteer-page-content">
+                    <h1>Volunteer with us</h1>
+                </div>
+
+            </section>
+
+            <section class="volunteer-page-info scroll-fade" style="text-align: center;">
+                <div class="volunteer-page-info-title">
+                    <h3>Every turtle saved is proof that change is possible.
+                        <br>
+                        Will you be part of their story?
+                    </h3>
+                </div>
+                <div class="volunteer-page-info-content">
+                    <div class="info-content">
+                        <img src="assets/image/perlindungan_icon.webp" alt="perlindungan icon">
+                        <p class="info-content-title">Perlindungan Penyu dan Habitatnya</p>
+                        <br>
+                        <p class="info-content-description">Melalui patroli rutin, YPI berupaya
+                            mencegah ancaman langsung terhadap
+                            penyu, seperti perburuan dan gangguan
+                            manusia.Untuk meningkatkan keberhasilan penetasan, sarang-sarang yang
+                            berada di lokasi berisiko dipindahkan ke
+                            tempat perlindungan yang lebih aman.</p>
+                    </div>
+
+                    <div class="info-content">
+                        <img src="assets/image/education_icon.webp" alt="perlindungan icon">
+                        <p class="info-content-title">Edukasi Lingkungan</p>
+                        <br>
+                        <p class="info-content-description">Pengetahuan adalahi langkah awal untuk
+                            perubahan besar. Meningkatkan
+                            kesadaran pelestarian penyu, mulai dari kunjungan sekolah hingga sosialisasi
+                            dan pelatihan untuk menciptakan agen
+                            perubahan.</p>
+                    </div>
+
+
+                    <div class="info-content">
+                        <img src="assets/image/research_icon.webp" alt="perlindungan icon">
+                        <p class="info-content-title">Monitoring dan Penelitian</p>
+                        <br>
+                        <p class="info-content-description">Program ini dilakukan untuk memastikan aksi kami tetap
+                            relevan dengan kondisi dan permasalahan yang ada. Selain mempelajari spesiesnya, kami juga
+                            melakukan pemantauan perdagangan ilegal produk berbahan penyu.</p>
+                    </div>
+
+                    <div class="info-content">
+                        <img src="assets/image/pemberdayaan_icon.webp" alt="perlindungan icon">
+                        <p class="info-content-title">Pendampingan dan Pemberdayaan</p>
+                        <br>
+                        <p class="info-content-description">Kami percaya bahwa pelestarian penyu
+                            harus melibatkan pemberdayaan
+                            masyarakat. Melalui workshop dan
+                            pelatihan, YPI mengajak masyarakat
+                            untuk menemukan alternatif ekonomi
+                            tanpa mengeksploitasi penyu.</p>
+                    </div>
+                </div>
+
+            </section>
+
+            <section class="volunteer-page-form scroll-fade">
+                <form class="volunteer-form scroll-fade form" id="volunteerForm" method="post">
+                    <h1 class="title">Become Our Volunteer</h1>
+                    <input type="text" id="volunteer_name" name="name" placeholder="Nama (contoh: John)" required />
+                    <input type="email" id="volunteer_email" name="email" placeholder="Email (contoh: john@email.com)"
+                        required />
+                    <input type="number" id="volunteer_age" name="age" placeholder="Umur (18 - 100)" min="18" max="100"
+                        required />
+                    <input type="text" id="volunteer_current_live" name="current live"
+                        placeholder="Kota yang ditempati sekarang (contoh: Bali)" required />
+                    <input type="tel" id="volunteer_phone" name="phone" required pattern="[0-9]{10,15}"
+                        placeholder="Nomor telepon (contoh:0812xxxxxxxx)" />
+
+                    <button type="submit" onclick="getVolunteerRegisterData()">Register Volunteer</button>
+                </form>
+            </section>
+        </section>
     </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-text">
+                <p>Yayasan Penyu Indonesia</p>
+            </div>
+        </div>
+    </footer>
 </body>
 
 </html>
