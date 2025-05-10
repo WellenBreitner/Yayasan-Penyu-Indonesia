@@ -49,6 +49,7 @@ header {
 /*navigation*/
 nav {
     width: 100%;
+    height: 60px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -60,7 +61,7 @@ nav {
 nav .nav_logo {
     width: 100px;
     height: 50px;
-    margin: .5rem 1rem;
+    margin: .5rem 0;
 }
 
 nav .nav-links {
@@ -165,6 +166,7 @@ main {
     text-align: justify;
     box-sizing: border-box;
     scroll-behavior: smooth;
+    padding-top: 60px;
 }
 
 /*landing page*/
@@ -460,10 +462,100 @@ section.program-location .program-location-button-list .location-list table td {
     padding: 10px;
 }
 
+
+/*donate page*/
+section.donate-page {
+    width: 100%;
+    height: 100%;
+}
+
+section.donate-page-landing {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 2rem;
+    gap: 2rem;
+}
+
+section.donate-page-content {
+    width: 50%;
+    max-height: 100%;
+    text-align: justify;
+}
+
+section.donate-page-landing img,
+section.donate-page-form img {
+    max-width: 50%;
+    max-height: 500px;
+    display: block;
+    margin: 0 auto;
+}
+
+section.donate-page-form {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 2rem;
+    gap: 2rem;
+}
+
+section.donate-page-form form.donate-form {
+    max-width: 100%;
+    max-height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+}
+
+section.donate-page-form form.donate-form input,
+section.donate-page-form form.donate-form textarea {
+    width: 100%;
+    height: 50px;
+    field-sizing: content;
+    padding: 1rem;
+    border-radius: 10px;
+    border: 1px solid var(--black-color);
+    font-size: 20px;
+    font-family: var(--font-font);
+    background-color: var(--color3-color);
+    border: none;
+}
+
+::placeholder {
+    color: #7b7979;
+}
+
+section.donate-page-form form.donate-form textarea {
+    height: 100px;
+}
+
+section.donate-page-form form.donate-form button {
+    width: 100%;
+    height: 50px;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    font-style: normal;
+    background-color: var(--color1-color);
+    color: var(--white-color);
+    border: none;
+}
+
 /*table*/
 @media (max-width: 1024px) {
     .title {
         font-size: 2.5rem;
+    }
+
+    .bold {
+        font-size: 30px;
     }
 
     section.about {
@@ -517,8 +609,26 @@ section.program-location .program-location-button-list .location-list table td {
         align-items: center;
     }
 
+    /*donation page*/
 
+    section.donate-page-landing {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        padding: 0 2rem;
+        gap: 2rem;
+    }
+
+    section.donate-page-form {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        padding: 0 2rem;
+    }
 }
+
 
 /*mobile*/
 @media (max-width: 600px) {
@@ -567,6 +677,40 @@ section.program-location .program-location-button-list .location-list table td {
     }
 
 }
+
+@media (max-width: 1024px),
+(orientation: landscape) and (max-height: 500px) {
+
+    section.donate-page-landing,
+    section.donate-page-form {
+        flex-direction: column=column-reverse;
+        height: auto;
+        padding: 1rem;
+    }
+
+    section.donate-page-content,
+    section.donate-page-form form.donate-form {
+        width: 100%;
+    }
+
+    section.donate-page-form form.donate-form input,
+    section.donate-page-form form.donate-form textarea,
+    section.donate-page-form form.donate-form button {
+        font-size: 16px;
+        padding: 0.8rem;
+        height: auto;
+    }
+
+    section.donate-page-form form.donate-form textarea {
+        height: 80px;
+    }
+
+    section.donate-page-form form.donate-form {
+        gap: 0.8rem;
+    }
+}
+
+
 
 /* @media (orientation: landscape) {
     section.about .about-content-img img {

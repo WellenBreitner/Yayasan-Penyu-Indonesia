@@ -16,10 +16,8 @@
             <img class="nav_logo" src="assets/image/ypi_logo.svg" alt="yayasan penyu indonesia logo">
 
             <ul class="nav-links">
-                <li><a href="#homePage" onclick="getPageFromLink('homePage')">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#our-program">Blog</a></li>
-                <li><a href="#program-location">Take Action</a></li>
+                <li><a href="#homePage">Home</a></li>
+                <li><a href="#aboutPage" onclick="getPageFromLink('aboutPage')">About</a></li>
                 <li><a href="#donatePage" onclick="getPageFromLink('donatePage')">Donate</a></li>
             </ul>
 
@@ -30,9 +28,9 @@
             </ul>
 
             <div class="nav-links-dropdown" id="navDropdown">
-                <a href="#about">Tentang</a>
-                <a href="#our-program">Program</a>
-                <a href="#program-location">Lokasi</a>
+                <a href="#homePage">Home</a>
+                <a href="#aboutPage" onclick="getPageFromLink('aboutPage')">About</a>
+                <a href="#donatePage" onclick="getPageFromLink('donatePage')">Donate</a>
             </div>
 
             <div class="translate-dropdown">
@@ -152,20 +150,38 @@
             </section>
         </section>
 
-        <section id="donatePage" style="display: none; box-sizing: border-box;">
-            <section class="donate-page-landing" style="width: 100%; height: 100vh; display: flex; justify-content:
-                center; align-items: center; padding: 0 2rem;">
-                <div class="donate-page-content" style="text-align: justify; width: 50%;">
-                    <h1 class="bold" style=" color: #026d77;">Your donation helps</h1>
-                    <p>Please help us to protect the endangered sea turtles and their habitats. Every donation, large
-                        or small, supports us in our fight against poaching and helps us to realize further species
+        <section class="donatePage scroll-fade" id="donatePage" style="display: none; box-sizing: border-box;">
+            <section class="donate-page-landing">
+                <div class="donate-page-content">
+                    <h1 class="bold" style="color: #026d77;">Your donation helps</h1>
+                    <p>Please help us to protect the endangered sea turtles and their habitats. Every donation, large
+                        or small, supports us in our fight against poaching and helps us to realize further species
                         protection measures. Many thanks!</p>
                 </div>
 
+                <img src="assets/image/donate_landing.webp" alt="donate image">
 
-                <img src="assets/image/donate_landing.svg" alt="donate image" style="max-width: 50%;
-                height: auto;
-                display: block;">
+            </section>
+
+            <section class="donate-page-form">
+                <form class="donate-form scroll-fade" id="donationForm" method="post" target="_blank">
+                    <input type="text" id="name" name="name" placeholder="Nama" required />
+
+                    <input type="email" id="email" name="email" placeholder="Email" required />
+
+                    <input type="tel" id="phone" name="phone" required pattern="[0-9]{10,15}"
+                        placeholder="Nomor telepon" />
+
+                    <input type="text" id="country" name="country" required placeholder="Negara" />
+
+                    <textarea id="message" name="message" placeholder="Pesan (Opsional)"></textarea>
+
+                    <input type="number" id="amount" name="amount" min="10000" placeholder="Jumlah" required />
+
+                    <button type="submit" onclick="getDonateData()">Donasi</button>
+                </form>
+
+                <img src=" assets/image/donation.webp" alt=" donation-form-image">
 
             </section>
 

@@ -205,7 +205,7 @@ function getPageFromLink(link) {
     const donate = document.getElementById("donatePage");
 
     switch (link) {
-        case 'homePage':
+        case 'aboutPage':
             home.style.display = "unset";
             donate.style.display = "none";
             break;
@@ -214,6 +214,31 @@ function getPageFromLink(link) {
             donate.style.display = "unset";
             break;
     }
+}
+
+function getDonateData() {
+    document.getElementById('donationForm').addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        const name = document.getElementById('name').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const phone = document.getElementById('phone').value.trim();
+        const country = document.getElementById('country').value;
+        let message = document.getElementById('message').value.trim();
+        const amount = parseInt(document.getElementById('amount').value);
+
+        if (message === "") {
+            message = "Tidak ada pesan";
+        }
+
+        console.log("Data Donasi:", {
+            name, email, phone, country, message, amount
+        });
+
+        this.reset();
+
+    });
+
 }
 
 window.addEventListener("DOMContentLoaded", () => {
