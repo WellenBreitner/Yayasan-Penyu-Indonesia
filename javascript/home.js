@@ -93,69 +93,77 @@ function locationButtonOnclick(location) {
     }
 }
 
-function dialogButton(open, programName) {
-    const dialog = document.getElementsByClassName("program-dialog")[0];
-    const title = document.getElementsByClassName("title-of-each-program")[0];
-    const description = document.getElementsByClassName("program-description")[0];
-    const image = document.getElementsByClassName("program-image")[0];
-    const programList = {
-        'perlindungan': `
-      YPI berupaya mencegah ancaman langsung terhadap penyu, seperti perburuan dan gangguan manusia. 
-      
-      Untuk meningkatkan keberhasilan penetasan, sarang-sarang yang berada di lokasi berisiko dipindahkan ke tempat perlindungan yang lebih aman. Setelah menetas, tukik dibantu untuk segera kembali ke laut.
-      
-      Pembersihan pantai secara berkala dilakukan untuk memastikan lingkungan yang aman dan bebas hambatan bagi penyu dewasa maupun tukik.
-      
-      Komitmen YPI berfokus pada pendekatan perlindungan di habitat alami penyu, karena kami percaya bahwa alam telah menyediakan kondisi terbaik yang dapat mendukung keberlangsungan hidup mereka.
-        `,
+function dialogButton(open, blogName) {
+    const dialog = document.getElementById("dialog");
+    const title = document.getElementsByClassName("dialog-title")[0];
+    const description = document.getElementsByClassName("dialog-description")[0];
+    const image = document.getElementsByClassName("dialog-image")[0];
+    const closeBtn = document.getElementById('closeDialog');
 
-        'edukasi': `
-      Pengetahuan adalah langkah awal untuk perubahan besar. 
-      
-      Meningkatkan kesadaran pelestarian penyu dilakukan melalui berbagai kegiatan, mulai dari kunjungan sekolah hingga sosialisasi dan pelatihan untuk menciptakan agen perubahan.
-        `,
+    const newsList = [
+        {
+            title: "Perdagangan Ilegal Produk Penyu Masih Marak di Marketplace Populer!",
+            content: `\nMeskipun penyu dilindungi hukum, perdagangan produk berbahan penyu masih terjadi di marketplace digital seperti Shopee dan Tokopedia.Peraturan Pemerintah No. 7 Tahun 1999 dan Undang-Undang No. 5 Tahun 1990 mengatur perlindungan penyu dengan ancaman pidana penjara hingga 5 tahun dan/atau denda Rp 100 juta.Investigasi online YPI pada November 2024 menemukan 105 iklan aktif produk berbahan penyu dari 81 penjual di 38 kota/kabupaten, dengan total penjualan 20.884 pcs dan keuntungan lebih dari Rp 138 juta.Produk ilegal meliputi umpan pancing, perhiasan (gelang, cincin, liontin), minyak urut, pajangan, hingga keris.\n
+YPI mengajak masyarakat untuk membantu:
+1. Cari produk ilegal menggunakan kata kunci unik (misal: Pnyu, Pendok).
+2. Klik produk dan laporkan menggunakan fitur “Report”.
+3. Ajak teman untuk ikut melapor.
+Satu laporan darimu bisa menyelamatkan penyu!`
+        },
+        {
+            title: "Anak Sekolah Bersimulasi Menjadi Ranger Penjaga Penyu di Bali",
+            content: `\nPada 16–17 Desember 2024, YPI mengadakan edukasi penyu bersama 100 siswa kelas 1 hingga 3 dari SD Aruna Vidya. Tujuannya untuk mengembangkan metode edukasi tanpa mengganggu siklus alami penyu.Kegiatan dibuka dengan pengenalan siklus hidup penyu melalui nyanyian, dilanjutkan dengan penjelasan dasar tentang penyu. Setiap anak mendapat jurnal aktivitas.Anak-anak mengikuti dongeng interaktif dan simulasi menjadi ranger. Mereka belajar mengidentifikasi jejak, merelokasi sarang replika, dan menjaga dari pencuri fiktif. Mereka juga melakukan aksi nyata berupa bersih pantai.Kimi, maskot penyu sisik YPI, hadir di akhir acara dan menjawab pertanyaan dari anak-anak. Para siswa menyampaikan komitmen menjaga kelestarian penyu.Terima kasih kepada 11 relawan luar biasa: Dinda, Abella, Ratu, Istya, Kina, Sony, Gita, Ika, Sita, Rama, dan Rahmah.YPI berharap pengalaman ini menumbuhkan kepedulian anak-anak terhadap penyu dan habitatnya.`
+        },
+        {
+            title: "Etika Mengintip Penyu Bertelur",
+            content: `\nJakarta – Yayasan Penyu Indonesia (YPI) berbagi tips kepada traveler yang ingin menyaksikan aktivitas penyu dan tukik di tepi pantai.\n
+Indonesia memiliki enam dari tujuh jenis penyu di dunia, yakni penyu hijau (Chelonia mydas), penyu sisik (Eretmochelys imbricata), penyu lekang (Lepidochelys olivacea), penyu belimbing (Dermochelys coriacea), penyu pipih (Natator depressus), dan penyu tempayan (Caretta caretta).Keenam jenis penyu tersebut dilindungi oleh Peraturan Pemerintah (PP) Nomor 7 Tahun 1999 tentang Pengawetan Jenis Tumbuhan dan Satwa. Segala bentuk perdagangan penyu, baik dalam keadaan hidup, mati, maupun bagian tubuhnya, dilarang. Undang-undang konservasi juga mengatur sanksi bagi pelanggarnya.Jumlah penyu yang sedikit harus menghadapi banyak ancaman, termasuk dari manusia. Operator wisata yang tidak peduli terhadap konservasi dan wisatawan yang tidak tertib termasuk dalam ancaman tersebut.Ketua Yayasan Penyu Indonesia, Bayu Sandi, menyatakan bahwa wisata penyu tetap bisa dilakukan dengan syarat tertentu. Traveler harus didampingi oleh ranger terlatih dan mematuhi aturan konservasi.\n
+Berikut adalah tips dari YPI untuk mengamati penyu bertelur:
+1. Jangan menggunakan flash untuk memotret, gunakan lampu merah.
+2. Jaga jarak minimal 10 meter dari penyu.
+3. Tonton penyu dari belakang, jangan di depan penyu.
+4. Jangan menyentuh penyu atau tukik.
+5. Hindari berpesta atau membuat keributan di area konservasi.`
+        },
 
-        'monitoring': `
-      Program ini dilakukan untuk memastikan aksi kami tetap relevan dengan kondisi dan permasalahan yang ada. 
-      
-      Selain mempelajari spesiesnya, kami juga melakukan pemantauan perdagangan ilegal produk berbahan penyu.
-        `,
+        {
+            title: "Fakta, Tukik adalah Bayi Penyu yang Mandiri!",
+            content: `\nTukik adalah bayi penyu yang menunjukkan kemandirian luar biasa sejak lahir. Mereka tidak ditemani induknya saat menetas.Tukik menuju laut dengan mengikuti cahaya cakrawala. Namun, cahaya buatan dari pembangunan di pantai bisa membuat mereka tersesat.Jika tukik berjalan ke arah yang salah, bantu arahkan ke laut, tapi jangan dipelihara karena bisa mengganggu proses imprinting.\n
+Berikut 6 fakta penting tentang tukik:
+1. Perjalanan hidup tukik dimulai dari perjuangan menuju laut dan menghadapi predator.
+2. Tukik mandiri sejak lahir tanpa asuhan induk.
+3. Tukik bernavigasi menggunakan cahaya dan medan magnet bumi.
+4. Tantangan berat di laut menunggu mereka, termasuk predator besar.
+5. Tukik dan penyu dewasa penting untuk keseimbangan ekosistem laut.
+6. Banyak program konservasi fokus melindungi tukik dan habitatnya.
+YPI berkomitmen menjaga tukik di habitat alaminya untuk mewujudkan ekosistem laut yang lestari.`
+        }
+    ];
 
-        'pemberdayaan': `
-      Kami percaya bahwa pelestarian penyu harus melibatkan pemberdayaan masyarakat. 
-      
-      Melalui workshop dan pelatihan, YPI mengajak masyarakat untuk menemukan alternatif ekonomi tanpa mengeksploitasi penyu.
-        `
-    }
 
-    switch (programName) {
-        case 'perlindungan': {
-            title.innerHTML = "Perlindungan penyu dan habitatnya";
-            image.src = "assets/image/perlindungan-penyu-dan-habitatnya-img.jpg";
-            image.alt = "Program perlindungan";
-            description.innerHTML = programList.perlindungan;
+    switch (blogName) {
+        case 'produk': {
+            title.innerHTML = newsList[0].title.replace(/\n/g, "<br>");
+            description.innerHTML = newsList[0].content.replace(/\n/g, "<br>");
+            image.src = "assets/image/produk_news.jpg"
             break
         }
-
-        case 'edukasi': {
-            title.innerHTML = "Edukasi lingkungan";
-            image.src = "assets/image/edukasi-img.jpg";
-            image.alt = "Program edukasi";
-            description.innerHTML = programList.edukasi;
+        case 'sekolah': {
+            title.innerHTML = newsList[1].title.replace(/\n/g, "<br>");
+            description.innerHTML = newsList[1].content.replace(/\n/g, "<br>");
+            image.src = "assets/image/anak_sekolah_news.webp"
             break
         }
-        case 'monitoring': {
-            title.innerHTML = "Monitoring dan penelitian";
-            image.src = "assets/image/monitoring-dan-penelitian.jpg";
-            image.alt = "Program monitoring";
-            description.innerHTML = programList.monitoring;
+        case 'etika': {
+            title.innerHTML = newsList[2].title.replace(/\n/g, "<br>");
+            description.innerHTML = newsList[2].content.replace(/\n/g, "<br>");
+            image.src = "assets/image/etika_img.jpg"
             break
         }
-        case 'pemberdayaan': {
-            title.innerHTML = "pendampingan dan pemberdayaan";
-            image.src = "assets/image/pemberdayaan-img.jpg";
-            image.alt = "Program penelitian";
-            description.innerHTML = programList.pemberdayaan;
+        case 'fakta': {
+            title.innerHTML = newsList[3].title.replace(/\n/g, "<br>");
+            description.innerHTML = newsList[3].content.replace(/\n/g, "<br>");
+            image.src = "assets/image/tukik.webp"
             break
         }
     }
@@ -165,6 +173,10 @@ function dialogButton(open, programName) {
     } else {
         dialog.close();
     }
+
+    closeBtn.addEventListener('click', () => {
+        dialog.close();
+    });
 }
 
 let IsBurgerIconOpen = false
@@ -201,22 +213,22 @@ function googleTranslateElementInit() {
 })();
 
 function getPageFromLink(link) {
-    const home = document.getElementById("homePage");
+    const about = document.getElementById("aboutPage");
     const donate = document.getElementById("donatePage");
     const volunteer = document.getElementById("volunteerPage");
     switch (link) {
         case 'aboutPage':
-            home.style.display = "unset";
+            about.style.display = "unset";
             donate.style.display = "none";
             volunteer.style.display = "none";
             break;
         case 'donatePage':
-            home.style.display = "none";
+            about.style.display = "none";
             donate.style.display = "unset";
             volunteer.style.display = "none";
             break;
         case 'volunteerPage':
-            home.style.display = "none";
+            about.style.display = "none";
             donate.style.display = "none";
             volunteer.style.display = "unset";
             break;

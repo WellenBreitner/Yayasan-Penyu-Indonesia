@@ -8,7 +8,7 @@
     --color5-color: #fbf5c9;
     --white-color: #f8fafc;
     --black-color: black;
-    --font-color: #1f2c3e;
+    --location-font-color: #1f2c3e;
     --font-font: "Titillium Web", sans-serif;
 }
 
@@ -170,7 +170,13 @@ main {
 }
 
 /*landing page*/
-section.landing-page {
+
+section.aboutPage {
+    width: 100%;
+    height: 100%;
+}
+
+section.about-landing-page {
     width: 100%;
     height: 100vh;
     background:
@@ -184,13 +190,12 @@ section.landing-page {
     align-self: center;
 }
 
-section.landing-page h1 {
+section.about-landing-page h1 {
     font-size: 80px;
     font-family: var(--font-font);
     color: var(--white-color);
     text-align: center;
     text-shadow: 1px 5px 10px rgba(0, 0, 0, 1);
-
 }
 
 /*about section*/
@@ -199,157 +204,140 @@ section.about {
     height: 100vh;
     padding: 2rem;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 1.5rem;
+    background: url(assets/image/about_background.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.line-height {
+    line-height: 2rem;
 }
 
 section.about .about-content {
     width: 50%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    height: fit-content;
 }
 
-section.about .about-content-img {
-    width: 50%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-section.about .about-content-img img {
-    width: 85%;
-    height: 60%;
-    display: block;
-    margin: 0 auto;
-}
-
-/*our program section*/
-::backdrop {
-    background-color: rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(5px);
-}
-
-section.our-program {
+section.vision {
     width: 100%;
     height: 100vh;
-    padding: 0 2rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 5rem;
+    gap: 1.5rem;
+    background: url(assets/image/vision_background.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
-section.our-program dialog.program-dialog {
-    width: 80%;
-    height: 80%;
-    margin: auto;
-    padding: 4rem;
-    border: none;
-    background-color: var(--white-color);
+div.vision-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    padding: 2rem;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+div.vision-content .vision-description,
+div.mission-content .mission-description,
+div.vision-content img,
+div.mission-content img {
+    max-width: 50%;
+}
+
+div.vision-content img {
+    max-height: 300px;
+    display: block;
     border-radius: 20px;
-    scroll-behavior: smooth;
+}
+
+section.mission {
+    width: 100%;
+    height: 100vh;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    background: url(assets/image/mission_background.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+}
+
+div.mission-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    padding: 2rem;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    text-align: right;
+    gap: 1.5rem;
+}
+
+div.mission-content img {
+    max-height: 300px;
+    display: block;
+    border-radius: 20px;
+}
+
+/*dialog*/
+dialog {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    margin: auto;
     scrollbar-width: none;
 }
 
-section.our-program p {
-    line-height: 2rem;
-}
-
-section.our-program dialog.program-dialog div.program-name {
+div.dialog-box {
     width: 100%;
-    display: flex;
-    z-index: 1;
-    justify-content: space-between;
-    margin-bottom: 16px;
-}
-
-section.our-program div.program-list {
-    width: 100%;
-    height: fit-content;
-    display: flex;
-    flex-direction: row;
-    gap: 2rem;
-}
-
-section.our-program div.program-content img.program-image {
-    width: 100%;
-    display: block;
-    margin: 16px auto;
-    border-radius: 20px;
-}
-
-section.our-program div.program-content img.program-image {
-    width: fit-content;
-    height: 300px;
-    display: block;
-    margin: 16px auto;
-    border-radius: 20px;
-    object-fit: contain;
-}
-
-section.our-program div.program-content p.program-description {
-    text-align: justify;
-    margin: 0 16px;
-}
-
-section.our-program div.program {
-    width: 250px;
-    height: 300px;
-    padding: .5rem;
-    border-radius: 20px;
-    white-space: initial;
+    height: 100%;
+    padding: 4rem;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+img.dialog-image {
+    width: 50%;
+    max-height: 500px;
+    margin: 2rem 0;
+    border-radius: 20px;
+    max-height: 500px;
+}
+
+dialog #closeDialog {
+    width: 50%;
+    padding: 10px;
+    margin: 2rem 0;
     cursor: pointer;
+    border: none;
+    text-align: center;
+    border-radius: 10px;
+    font-weight: bold;
 }
 
-section.our-program div.program-perlindungan {
-    background-image: url(assets/image/perlindungan-penyu-dan-habitatnya-img.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    background-color: black;
-}
-
-section.our-program div.program-penelitian {
-    background-image: url(assets/image/monitoring-dan-penelitian.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    background-color: black;
-}
-
-section.our-program div.program-pemberdayaan {
-    background-image: url(assets/image/pemberdayaan-img.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    background-color: black;
-}
-
-section.our-program div.program-edukasi {
-    background-image: url(assets/image/edukasi-img.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    background-color: black;
-}
-
-section.our-program div.program h1 {
-    font-size: 20px;
-    color: var(--color5-color);
-}
-
-section.our-program div.program p {
-    font-size: 15px;
-    font-style: italic;
-    color: var(--white-color);
+::backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
 }
 
 /*program location section*/
@@ -367,37 +355,39 @@ section.program-location {
 
 section.program-location div.program-location-content {
     width: 100%;
-    height: 50%;
+    height: auto;
     display: flex;
+    padding: 2rem;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-}
-
-section.program-location div.program-location-img {
-    width: 60%;
-    height: 100%;
+    gap: 2rem;
 }
 
 section.program-location img {
-    width: 100%;
-    height: 100%;
+    max-width: 50%;
+    max-height: 500px;
+    display: block;
+    margin: 0 auto;
 }
 
 section.program-location .program-location-button-list {
     width: 40%;
-    height: fit-content;
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
 }
 
 section.program-location .program-location-button-list .location-button {
-    width: 100%;
+    max-width: 100%;
     margin: 1rem 0;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
     gap: .5rem;
@@ -413,25 +403,25 @@ section.program-location .program-location-button-list .location-button button {
 }
 
 section.program-location .program-location-button-list .location-button button:hover {
-    background-color: var(--font-color);
+    background-color: var(--location-font-color);
     color: var(--white-color);
     transition: all 0.3s ease-in-out;
     cursor: pointer;
 }
 
-section.program-location .program-location-button-list .location-button button:clicked {
-    background-color: var(--font-color);
+section.program-location .program-location-button-list .location-button button:active {
+    background-color: var(--location-font-color);
     color: var(--white-color);
 }
 
 section.program-location .program-location-button-list .location-list {
     width: 100%;
-    height: 50%;
+    height: auto;
 }
 
 section.program-location .program-location-button-list .location-list table {
     width: 100%;
-    height: fit-content;
+    height: 100%;
     border: none;
     border-collapse: collapse;
     font-size: 20px;
@@ -450,6 +440,78 @@ section.program-location .program-location-button-list .location-list table td {
     padding: 10px;
 }
 
+/* blog-content */
+section.blog {
+    width: 100%;
+    min-height: 100vh;
+}
+
+div.blog-content {
+    width: 100%;
+    height: 100%;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+div.blog-content div.news-list {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+div.blog-content div.news-list div.news {
+    width: 500px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    text-align: center;
+    color: var(--white-color);
+    font-weight: bold;
+    border-radius: 20px;
+    border: none;
+    margin: 2rem 0;
+}
+
+div.blog-content div.news-list div.news1 {
+    background-image: url(assets/image/produk_news.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-color: black;
+}
+
+div.blog-content div.news-list div.news2 {
+    background-image: url(assets/image/anak_sekolah_news.webp);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-color: black;
+}
+
+div.blog-content div.news-list div.news3 {
+    background-image: url(assets/image/etika_img.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-color: black;
+}
+
+div.blog-content div.news-list div.news4 {
+    background-image: url(assets/image/tukik.webp);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-color: black;
+}
 
 /*donate page*/
 section.donate-page {
@@ -596,7 +658,6 @@ div.info-content {
 div.info-content img {
     max-width: 50%;
     max-height: 500px;
-    text-align: justify;
     display: block;
     margin: 2rem auto;
 }
@@ -653,8 +714,6 @@ section.volunteer-page-form form.volunteer-form button {
     border: none;
 }
 
-
-
 /*footer*/
 footer {
     width: 100%;
@@ -677,13 +736,6 @@ footer {
         font-size: 30px;
     }
 
-    section.about {
-        height: auto;
-        flex-direction: column-reverse;
-        justify-content: center;
-        align-items: center;
-    }
-
     nav ul.nav-links {
         display: none;
     }
@@ -692,39 +744,59 @@ footer {
         display: unset;
     }
 
-    section.about .about-content {
+    /*about*/
+    section.about {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /*vision*/
+    section.vision {
+        height: auto;
+    }
+
+    section.vision div.vision-content {
+        flex-direction: column-reverse;
+    }
+
+    /*mission*/
+    section.mission {
+        height: auto;
+    }
+
+    section.mission div.mission-content {
+        flex-direction: column-reverse;
+        text-align: justify;
+    }
+
+    /*program location*/
+    section.program-location {
+        height: auto;
+    }
+
+    section.program-location .program-location-button-list .location-button {
+        justify-content: center;
+    }
+
+    section.about p,
+    section.about p.about-content {
         width: 100%;
     }
 
-    section.our-program {
+    /*blog*/
+    section.blog {
         height: auto;
-        justify-content: center;
     }
 
-    section.program-location {
-        height: 100vh;
-        justify-content: center;
-        align-items: center;
-    }
 
-    section.program-location div.program-location-content {
-        height: fit-content;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-    }
-
-    section.program-location .program-location-button-list {
-        height: fit-content;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+    div.vision-content .vision-description,
+    div.mission-content .mission-description,
+    div.vision-content img,
+    div.mission-content img {
+        max-width: 100%;
     }
 
     /*donation page*/
-
     section.donate-page-landing {
         height: auto;
         display: flex;
@@ -779,45 +851,9 @@ footer {
         font-size: 1.5rem;
     }
 
-    section.landing-page h1,
+    section.about-landing-page h1,
     div.volunteer-page-content h1 {
         font-size: 2rem;
-    }
-
-    section.about {
-        height: 100vh;
-    }
-
-    section.about .about-content-img img {
-        display: none;
-    }
-
-    section.our-program {
-        height: 100vh;
-    }
-
-    section.program-location {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    section.program-location .program-location-button-list .location-button {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    section.program-location img {
-        width: 100%;
-        height: 100%;
-    }
-
-    section.program-content img.program-image {
-        width: 100%;
-        height: 100%;
     }
 
 }

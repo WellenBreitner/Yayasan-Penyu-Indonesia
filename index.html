@@ -47,89 +47,58 @@
 
 
     <main>
-        <section id="homePage">
-            <section class="landing-page">
+        <section id="aboutPage">
+            <section class="about-landing-page">
                 <h1>Yayasan Penyu Indonesia</h1>
             </section>
 
-            <section class="about" id="about">
-                <div class="about-content scroll-fade">
-                    <h1 class="title">Tentang Kami</h1>
-                    <p>Yayasan Penyu Indonesia (YPI) resmi didirikan pada tahun 2018. Fokus kami adalah pada
-                        perlindungan
-                        penyu di habitat-habitat penting di Indonesia. Yayasan Penyu Indonesia merupakan bagian dari
-                        Asosiasi NGO Turtle Foundation yang bergerak di 7
-                        negara yaitu Indonesia, Jerman, Cabo Verde, Liechtenstein, Switzerland, UK, dan USA.</p>
-                    <br>
-
-                    <h1 class="title">Visi</h1>
-                    <p>Masa depan di mana penyu dan habitatnya terlindungi secara berkelanjutan, sehat, dan aman dari
-                        ancaman kepunahan dan kerusakan.</p>
-                    <br>
-
-                    <h1 class="title">Misi</h1>
-                    <p>Berkontribusi pada konservasi penyu di lokasi proyek kami dengan bekerja sama bersama masyarakat
-                        setempat untuk menciptakan masa depan di mana penyu dan manusia dapat berkembang.</p>
-                </div>
-                <div class="about-content-img scroll-fade">
-                    <img src="assets/image/turtle.png" alt="turtle image">
-                </div>
+            <section class="about scroll-fade">
+                <p class="title scroll-fade">Tentang Kami</p>
+                <p class="about-content">Yayasan Penyu Indonesia berkomitmen untuk melindungi dan melestarikan penyu
+                    serta habitatnya. Tujuan
+                    kami adalah mencegah perburuan dan perdagangan ilegal, menjaga pantai tempat penyu bertelur dari
+                    pembangunan berlebihan dan pencemaran, serta mendorong praktik berkelanjutan yang mendukung
+                    keanekaragaman hayati laut.</p>
             </section>
 
-            <section class="our-program" id="our-program">
-                <dialog class="program-dialog">
-                    <div class="program-name">
-                        <h1 class="title title-of-each-program">Program</h1>
-                        <img src="assets/image/closeIcon.svg" alt="close dialog" onclick="dialogButton(false)"
-                            style="cursor: pointer;">
-                    </div>
-                    <div class="program-content">
-                        <img class="program-image">
-                        <p class="program-description"></p>
-                    </div>
-                </dialog>
+            <section class="vision scroll-fade">
 
-                <div class="program-list-title scroll-fade">
-                    <h1 class="title our-program-title">Program Kami</h1>
+                <div class="vision-content">
+                    <div class="vision-description">
+                        <p class="title scroll-fade">visi</p>
+                        <p class="scroll-fade line-height">Visi kami adalah masa depan di mana penyu dan habitatnya
+                            terlindungi
+                            secara
+                            berkelanjutan, sehat, dan aman dari ancaman kepunahan dan kerusakan.</p>
+                    </div>
+
+                    <img class="scroll-fade" src="assets/image/vision_img.webp" alt="visi image">
                 </div>
 
-                <marquee behavior="scroll" scrollamount="15" direction="left" onmouseover="this.stop()"
-                    onmouseout="this.start()">
-                    <div class="program-list">
-
-                        <div class="program program-perlindungan" onclick="dialogButton(true, 'perlindungan')">
-                            <h1 class="title">Perlindungan Penyu dan Habitatnya</h1>
-                            <p class="italic">Click for more information*</p>
-                        </div>
-                        <div class="program program-penelitian" onclick="dialogButton(true, 'monitoring')">
-                            <h1 class="title">Monitoring & Penelitian</h1>
-                            <p class="italic">Click for more information*</p>
-                        </div>
-
-                        <div class="program program-pemberdayaan" onclick="dialogButton(true, 'pemberdayaan')">
-                            <h1 class="title">Pendampingan & Pemberdayaan</h1>
-                            <p class="italic">Click for more information*</p>
-                        </div>
-
-                        <div class="program program-edukasi" onclick="dialogButton(true, 'edukasi')">
-                            <h1 class="title">Edukasi Lingkungan</h1>
-                            <p class="italic">Click for more information*</p>
-                        </div>
-                    </div>
-
-                </marquee>
             </section>
 
-            <section class="program-location" id="program-location">
+            <section class="mission scroll-fade">
 
+                <div class="mission-content">
+                    <div class="mission-description">
+                        <p class="title scroll-fade">Misi</p>
+                        <p class="scroll-fade">Misi kami adalah untuk berkontribusi pada konservasi penyu di lokasi
+                            proyek kami dengan bekerja sama dengan masyarakat setempat untuk menciptakan masa depan di
+                            mana penyu dan manusia dapat berkembang.</p>
+                    </div>
+
+                    <img class="scroll-fade" src="assets/image/mission_img.webp" alt="misi image">
+                </div>
+
+            </section>
+
+            <section class="program-location scroll-fade">
                 <div class="program-location-title scroll-fade">
                     <h1 class="title our-program-title">Lokasi Program</h1>
                 </div>
 
                 <div class="program-location-content scroll-fade">
-                    <div class="program-location-img">
-                        <img class="location-img">
-                    </div>
+                    <img class="location-img">
 
                     <div class="program-location-button-list scroll-fade">
                         <div class="location-button">
@@ -150,6 +119,36 @@
                         </div>
                     </div>
                 </div>
+            </section>
+
+            <section class="blog scroll-fade">
+                <div class="blog-content scroll-fade">
+                    <p class="title scroll-fade">News blog</p>
+                    <div class="news-list">
+                        <div class="news scroll-fade news1" onclick="dialogButton(true,'produk')">Perdagangan
+                            Ilegal Produk
+                            Penyu Masih Marak di Marketplace
+                            Populer!</div>
+                        <div class="news scroll-fade news2" onclick="dialogButton(true,'sekolah')">Anak Sekolah
+                            Bersimulasi
+                            Menjadi Ranger Penjaga Penyu di
+                            Bali</div>
+                        <div class="news scroll-fade news3" onclick="dialogButton(true,'etika')">Etika Mengintip Penyu
+                            Bertelur</div>
+                        <div class="news scroll-fade news4" onclick="dialogButton(true,'fakta')">Fakta, Tukik adalah
+                            bayi
+                            penyu yang mandiri!</div>
+                    </div>
+                </div>
+
+                <dialog id="dialog">
+                    <div class="dialog-box">
+                        <h2 class="dialog-title">Dialog Title</h2>
+                        <img class="dialog-image" alt="blog image">
+                        <p class="dialog-description">This is a simple modal dialog example.</p>
+                        <button type="button" id="closeDialog">Tutup</button>
+                    </div>
+                </dialog>
             </section>
         </section>
 
@@ -207,7 +206,7 @@
                     </h3>
                 </div>
                 <div class="volunteer-page-info-content">
-                    <div class="info-content">
+                    <div class="info-content scroll-fade">
                         <img src="assets/image/perlindungan_icon.webp" alt="perlindungan icon">
                         <p class="info-content-title">Perlindungan Penyu dan Habitatnya</p>
                         <br>
@@ -219,7 +218,7 @@
                             tempat perlindungan yang lebih aman.</p>
                     </div>
 
-                    <div class="info-content">
+                    <div class="info-content scroll-fade">
                         <img src="assets/image/education_icon.webp" alt="perlindungan icon">
                         <p class="info-content-title">Edukasi Lingkungan</p>
                         <br>
@@ -231,7 +230,7 @@
                     </div>
 
 
-                    <div class="info-content">
+                    <div class="info-content scroll-fade">
                         <img src="assets/image/research_icon.webp" alt="perlindungan icon">
                         <p class="info-content-title">Monitoring dan Penelitian</p>
                         <br>
@@ -240,7 +239,7 @@
                             melakukan pemantauan perdagangan ilegal produk berbahan penyu.</p>
                     </div>
 
-                    <div class="info-content">
+                    <div class="info-content scroll-fade">
                         <img src="assets/image/pemberdayaan_icon.webp" alt="perlindungan icon">
                         <p class="info-content-title">Pendampingan dan Pemberdayaan</p>
                         <br>
