@@ -35,7 +35,7 @@ function locationButtonOnclick(location) {
             const sumatraImageElement = document.getElementsByClassName("location-img")[0];
             const sumatraButtonElement = document.getElementsByClassName(location + "-button")[0];
 
-            sumatraImageElement.src = "assets/image/6.svg";
+            sumatraImageElement.src = "assets/image/sumatra.webp";
             sumatraImageElement.alt = "Sumatra selected";
 
             sumatraButtonElement.style.backgroundColor = "#1f2c3e";
@@ -56,7 +56,7 @@ function locationButtonOnclick(location) {
             const sulawesiImageElement = document.getElementsByClassName("location-img")[0];
             const sulawesiButtonElement = document.getElementsByClassName(location + "-button")[0];
 
-            sulawesiImageElement.src = "assets/image/7.svg";
+            sulawesiImageElement.src = "assets/image/sulawesi.webp";
             sulawesiImageElement.alt = "Sulawesi selected";
 
             sulawesiButtonElement.style.backgroundColor = "#1f2c3e";
@@ -76,7 +76,7 @@ function locationButtonOnclick(location) {
             const baliImageElement = document.getElementsByClassName("location-img")[0];
             const baliButtonElement = document.getElementsByClassName(location + "-button")[0];
 
-            baliImageElement.src = "assets/image/8.svg";
+            baliImageElement.src = "assets/image/bali.webp";
             baliImageElement.alt = "Bali selected";
 
             baliButtonElement.style.backgroundColor = "#1f2c3e";

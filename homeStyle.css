@@ -60,8 +60,9 @@ nav {
 
 nav .nav_logo {
     width: 100px;
-    height: 50px;
+    height: 60px;
     margin: .5rem 0;
+    object-fit: contain;
 }
 
 nav .nav-links {
@@ -156,9 +157,6 @@ div.nav-links-dropdown a {
     border-bottom: 1px solid #eee;
 }
 
-
-
-
 /*main*/
 main {
     width: 100%;
@@ -170,7 +168,6 @@ main {
 }
 
 /*landing page*/
-
 section.aboutPage {
     width: 100%;
     height: 100%;
@@ -181,7 +178,7 @@ section.about-landing-page {
     height: 100vh;
     background:
         linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1)90%),
-        url(assets/image/ypi.svg);
+        url(assets/image/about_landing.webp);
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;
@@ -471,6 +468,7 @@ div.blog-content div.news-list div.news {
     width: 500px;
     height: 200px;
     display: flex;
+    padding: 0 2rem;
     justify-content: center;
     align-items: flex-end;
     text-align: center;
@@ -717,17 +715,82 @@ section.volunteer-page-form form.volunteer-form button {
 /*footer*/
 footer {
     width: 100%;
-    height: 100px;
+    height: fit-content;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: var(--color1-color);
+    padding: 2rem;
+    gap: 2rem;
+}
 
+div.footer-content {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+div.footer-content img.ypi-logo {
+    max-width: 50%;
+    max-height: 150px;
+}
+
+
+div.footer-contact {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: first baseline;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.padding-footer {
+    padding: .5rem 0;
+}
+
+div.footer-contact p {
+    color: var(--white-color);
+    font-size: 15px;
+    font-weight: bold;
+}
+
+div.footer-contact .media-social ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2rem;
+}
+
+div.footer-contact .media-social img {
+    width: 30px;
+    height: 30px;
+}
+
+div.footer-contact .donate-button button {
+    width: 150px;
+    height: 50px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 18px;
+    border: none;
+    background-color: var(--color5-color);
 }
 
 
 /*table*/
 @media (max-width: 1024px) {
+
     .title {
         font-size: 2.5rem;
     }
@@ -856,6 +919,27 @@ footer {
         font-size: 2rem;
     }
 
+    div.footer-contact {
+        width: 100%;
+        height: fit-content;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: first baseline;
+        flex-wrap: wrap;
+        gap: 2rem;
+    }
+
+
+    div.footer-contact .media-social ul {
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+    }
 }
 
 @media (max-width: 768px),

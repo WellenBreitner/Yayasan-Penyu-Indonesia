@@ -7,13 +7,14 @@
     <title>Yayasan Penyu Indonesia</title>
     <script src="javascript/home.js"></script>
     <link rel="stylesheet" href="homeStyle.css">
+    <link rel="shortcut icon" href="assets/image/YPI_logo_white_ico.ico" type="image/x-icon">
 
 </head>
 
 <body>
     <header>
         <nav>
-            <img class="nav_logo" src="assets/image/ypi_logo.svg" alt="yayasan penyu indonesia logo">
+            <img class="nav_logo" src="assets/image/YPI_logo_white.webp" alt="yayasan penyu indonesia logo">
 
             <ul class="nav-links">
                 <li><a href="#homePage">Home</a></li>
@@ -52,18 +53,19 @@
                 <h1>Yayasan Penyu Indonesia</h1>
             </section>
 
-            <section class="about scroll-fade">
+            <section class="about">
                 <p class="title scroll-fade">Tentang Kami</p>
-                <p class="about-content">Yayasan Penyu Indonesia berkomitmen untuk melindungi dan melestarikan penyu
+                <p class="about-content scroll-fade">Yayasan Penyu Indonesia berkomitmen untuk melindungi dan
+                    melestarikan penyu
                     serta habitatnya. Tujuan
                     kami adalah mencegah perburuan dan perdagangan ilegal, menjaga pantai tempat penyu bertelur dari
                     pembangunan berlebihan dan pencemaran, serta mendorong praktik berkelanjutan yang mendukung
                     keanekaragaman hayati laut.</p>
             </section>
 
-            <section class="vision scroll-fade">
+            <section class="vision">
 
-                <div class="vision-content">
+                <div class="vision-content scroll-fade">
                     <div class="vision-description">
                         <p class="title scroll-fade">visi</p>
                         <p class="scroll-fade line-height">Visi kami adalah masa depan di mana penyu dan habitatnya
@@ -77,9 +79,9 @@
 
             </section>
 
-            <section class="mission scroll-fade">
+            <section class="mission">
 
-                <div class="mission-content">
+                <div class="mission-content scroll-fade">
                     <div class="mission-description">
                         <p class="title scroll-fade">Misi</p>
                         <p class="scroll-fade">Misi kami adalah untuk berkontribusi pada konservasi penyu di lokasi
@@ -92,7 +94,7 @@
 
             </section>
 
-            <section class="program-location scroll-fade">
+            <section class="program-location">
                 <div class="program-location-title scroll-fade">
                     <h1 class="title our-program-title">Lokasi Program</h1>
                 </div>
@@ -121,23 +123,31 @@
                 </div>
             </section>
 
-            <section class="blog scroll-fade">
+            <section class="blog">
                 <div class="blog-content scroll-fade">
                     <p class="title scroll-fade">News blog</p>
                     <div class="news-list">
-                        <div class="news scroll-fade news1" onclick="dialogButton(true,'produk')">Perdagangan
-                            Ilegal Produk
-                            Penyu Masih Marak di Marketplace
-                            Populer!</div>
-                        <div class="news scroll-fade news2" onclick="dialogButton(true,'sekolah')">Anak Sekolah
-                            Bersimulasi
-                            Menjadi Ranger Penjaga Penyu di
-                            Bali</div>
-                        <div class="news scroll-fade news3" onclick="dialogButton(true,'etika')">Etika Mengintip Penyu
-                            Bertelur</div>
-                        <div class="news scroll-fade news4" onclick="dialogButton(true,'fakta')">Fakta, Tukik adalah
-                            bayi
-                            penyu yang mandiri!</div>
+                        <div class="news scroll-fade news1" onclick="dialogButton(true,'produk')">
+                            <p>Perdagangan
+                                Ilegal Produk
+                                Penyu Masih Marak di Marketplace
+                                Populer!</p>
+                        </div>
+                        <div class="news scroll-fade news2" onclick="dialogButton(true,'sekolah')">
+                            <p>Anak Sekolah
+                                Bersimulasi
+                                Menjadi Ranger Penjaga Penyu di
+                                Bali</p>
+                        </div>
+                        <div class="news scroll-fade news3" onclick="dialogButton(true,'etika')">
+                            <p>Etika Mengintip Penyu
+                                Bertelur</p>
+                        </div>
+                        <div class="news scroll-fade news4" onclick="dialogButton(true,'fakta')">
+                            <p>Fakta, Tukik adalah
+                                bayi
+                                penyu yang mandiri!</p>
+                        </div>
                     </div>
                 </div>
 
@@ -275,9 +285,36 @@
 
     <footer>
         <div class="footer-content">
-            <div class="footer-text">
-                <p>Yayasan Penyu Indonesia</p>
+            <img class="ypi-logo" src="assets/image/YPI_logo_white.webp" alt="YPI logo">
+            <img class="ypi-logo" src="assets/image/say_no_to_headstarting!.webp" alt="YPI campaign img">
+        </div>
+        <div class="footer-contact">
+            <div class="media-social">
+                <p class="padding-footer">Ikuti Kami:</p>
+                <ul>
+                    <li><a href="https://www.youtube.com/@yayasanpenyuindonesia9775" target="_blank"><img
+                                src="assets/image/youtube.webp" alt="youtube_icon"></a></li>
+                    <li><a href="https://www.instagram.com/yayasanpenyu/" target="_blank"><img
+                                src="assets/image/instagram.webp" alt="instagram_icon"></a></li>
+                    <li><a href="https://www.facebook.com/YayasanPenyuIndonesia/" target="_blank"><img
+                                src="assets/image/facebook.webp" alt="facebook_icon"></a></li>
+                </ul>
             </div>
+
+            <div class="contact-us">
+                <p class="padding-footer">Hubungi Kami:</p>
+                <div class="email">
+                    <p>Email: info@yayasanpenyu.org</p>
+                </div>
+                <div class="phone">
+                    <p>Phone: +62 812 3806 0994</p>
+                </div>
+            </div>
+
+            <div class="donate-button">
+                <button type="button" onclick="getPageFromLink('donatePage')">Donate</button>
+            </div>
+
         </div>
     </footer>
 </body>
