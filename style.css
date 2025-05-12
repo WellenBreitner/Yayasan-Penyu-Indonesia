@@ -735,6 +735,7 @@ section.program-location .program-location-button-list .location-list table {
     border: none;
     border-collapse: collapse;
     font-size: 20px;
+    border: 1;
 }
 
 section.program-location .program-location-button-list .location-list table th {
