@@ -167,7 +167,321 @@ main {
     padding-top: 60px;
 }
 
-/*landing page*/
+/*campaign page*/
+section.campaignPage {
+    width: 100%;
+    height: auto;
+    padding: 2rem 0 0 0;
+    background-image: linear-gradient(to bottom,
+            rgba(255, 255, 255, 1) 0%,
+            rgba(189, 232, 232, 1) 30%,
+            rgba(92, 202, 195, 1) 60%,
+            rgba(40, 182, 174, 1) 100%);
+}
+
+section.campaign-landing-page {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0;
+}
+
+section.campaign-landing-page .turtle-img {
+    max-width: 900px;
+    width: 80%;
+    height: auto;
+}
+
+section.campaign-landing-page img.say_no_to_headstarting_img {
+    width: 100%;
+    max-height: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+section.campaign-landing-page video {
+    max-width: 800px;
+    width: 80%;
+    height: auto;
+    border-radius: 20px;
+    margin-bottom: 40px;
+}
+
+section.campaign-landing-page p {
+    font-weight: bold;
+    color: var(--color1-color);
+}
+
+.campaign-description {
+    width: 100%;
+    max-width: 700px;
+    text-align: center;
+    font-size: 20px;
+    line-height: 1.6;
+    padding: 0 20px;
+}
+
+/*gallery*/
+.white {
+    color: var(--white-color);
+    font-weight: bold;
+}
+
+.yellow {
+    color: #FBF5C9;
+    font-weight: bold;
+}
+
+section.gallery {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    background: url('assets/image/wave-pattern.webp');
+    background-position: center;
+    background-size: cover;
+}
+
+.gallery-title {
+    font-size: 2.5rem;
+    color: var(--white-color);
+    text-align: center;
+    max-width: 800px;
+    margin-bottom: 40px;
+}
+
+.gallery-image {
+    max-width: 900px;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/*penyu fact*/
+section.penyu-facts {
+    width: 100%;
+    height: 100vh;
+    background: url(assets/image/facts-bg.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 2rem;
+    gap: 1rem;
+}
+
+section.penyu-facts div.penyu-facts-title,
+section.penyu-facts div.penyu-facts-point {
+    width: 48%;
+    height: 100%;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+section.penyu-facts div.penyu-facts-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: var(--white-color);
+}
+
+section.penyu-facts div.penyu-facts-title span {
+    display: block;
+    font-weight: bold;
+    font-style: italic;
+}
+
+section.penyu-facts div.penyu-facts-title p {
+    width: 100%;
+    font-weight: bold;
+    text-align: right;
+    color: var(--white-color);
+}
+
+section.penyu-facts div.penyu-facts-point {
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    border-radius: 20px;
+}
+
+section.penyu-facts div.penyu-facts-point ul {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+section.penyu-facts div.penyu-facts-point ul li {
+    text-align: center;
+    font-size: 15px;
+    color: var(--white-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+section.penyu-facts div.penyu-facts-point ul li img {
+    max-width: 80px;
+    max-height: 80px;
+}
+
+/*headstarting facts*/
+section.headstarting-facts {
+    width: 100%;
+    height: 100vh;
+    background: url('assets/image/anti_headstarting_background.webp');
+    align-items: flex-start;
+    justify-content: space-between;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    flex-direction: column;
+    padding-bottom: 0;
+}
+
+section.headstarting-facts div.content-wrapper {
+    width: 100%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+section.headstarting-facts .grid-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+section.headstarting-facts .text-box {
+    background-color: var(--white-color);
+    padding: 16px;
+    border-radius: 8px;
+}
+
+section.headstarting-facts .text-wrapper {
+    padding-left: 2rem;
+}
+
+section.headstarting-facts div.headstarting-facts-bottom {
+    width: 100%;
+    height: 30%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+
+section.headstarting-facts div.headstarting-facts-bottom img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
+
+/*anti headstarting page*/
+section.anti-headstarting-page {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #E2B376;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 2rem;
+}
+
+section.anti-headstarting-page div.img-turtle {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section.anti-headstarting-page div.img-turtle img {
+    max-width: 500px;
+    max-height: 500px;
+    width: 100%;
+    height: 100%;
+}
+
+section.anti-headstarting-page div.anti-headstarting-content {
+    width: 40%;
+    height: 100%;
+    background: url(assets/image/anti_headstarting_content_background.webp);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+section.anti-headstarting-page div.anti-headstarting-content img {
+    width: 100%;
+    height: 250px;
+    object-fit: fill;
+}
+
+section.anti-headstarting-page div.anti-headstarting-content ul {
+    width: 80%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    list-style-type: square;
+}
+
+section.anti-headstarting-page div.anti-headstarting-content ul li {
+    font-size: 18px;
+    font-weight: bold;
+    padding: 1rem 0
+}
+
+section.anti-headstarting-page div.anti-headstarting-content div.say-no-to-headstarting {
+    width: 100%;
+    height: 100%;
+    font-weight: bold;
+    color: var(--white-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+section.anti-headstarting-page div.anti-headstarting-content div.say-no-to-headstarting .say-no-to-headstarting-title {
+    text-align: center;
+    font-size: 25px;
+    background-color: red;
+    border-radius: 20px;
+    padding: 1rem;
+}
+
+section.anti-headstarting-page div.anti-headstarting-content div.say-no-to-headstarting .say-no-to-headstarting-description {
+    text-align: justify;
+    font-size: 20px;
+    padding: 1rem;
+    background-color: var(--color1-color);
+    border-radius: 20px;
+}
+
+/*about landing page*/
 section.aboutPage {
     width: 100%;
     height: 100%;
@@ -262,7 +576,6 @@ div.vision-content img {
 section.mission {
     width: 100%;
     height: 100vh;
-    padding: 2rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -430,9 +743,13 @@ section.program-location .program-location-button-list .location-list table th {
     color: var(--white-color);
 }
 
-section.program-location .program-location-button-list .location-list table th,
 section.program-location .program-location-button-list .location-list table td {
     background-color: var(--white-color);
+    font-weight: bold;
+}
+
+section.program-location .program-location-button-list .location-list table th,
+section.program-location .program-location-button-list .location-list table td {
     border: none;
     padding: 10px;
 }
@@ -807,6 +1124,54 @@ div.footer-contact .donate-button button {
         display: unset;
     }
 
+    /*campaign*/
+    section.penyu-facts {
+        height: auto;
+    }
+
+    section.penyu-facts div.penyu-facts-title,
+    section.penyu-facts div.penyu-facts-point {
+        width: 100%;
+        height: 100%;
+    }
+
+    section.penyu-facts div.penyu-facts-title {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        color: var(--white-color);
+        gap: 2rem;
+    }
+
+    section.penyu-facts div.penyu-facts-title p {
+        text-align: justify;
+    }
+
+    /*headstarting facts*/
+    section.headstarting-facts {
+        height: auto;
+    }
+
+    section.headstarting-facts .grid-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    /*anti-headstarting-page*/
+    section.anti-headstarting-page {
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column-reverse;
+        gap: 2rem;
+    }
+
+    section.anti-headstarting-page div.anti-headstarting-content {
+        width: 80%;
+        height: 100%;
+    }
+
+
+
+
     /*about*/
     section.about {
         max-width: 100%;
@@ -912,6 +1277,10 @@ div.footer-contact .donate-button button {
 @media (max-width: 600px) {
     .title {
         font-size: 1.5rem;
+    }
+
+    .font-size {
+        font-size: 1rem;
     }
 
     section.about-landing-page h1,

@@ -17,7 +17,7 @@
             <img class="nav_logo" src="assets/image/YPI_logo_white.webp" alt="yayasan penyu indonesia logo">
 
             <ul class="nav-links">
-                <li><a href="#homePage">Home</a></li>
+                <li><a href="#homePage" onclick="getPageFromLink('campaignPage')">Home</a></li>
                 <li><a href="#aboutPage" onclick="getPageFromLink('aboutPage')">About</a></li>
                 <li><a href="#donatePage" onclick="getPageFromLink('donatePage')">Donate</a></li>
                 <li> <a href="#volunteer" onclick="getPageFromLink('volunteerPage')">Volunteer</a></li>
@@ -30,8 +30,8 @@
             </ul>
 
             <div class="nav-links-dropdown" id="navDropdown">
-                <a href="#homePage">Home</a>
-                <a href="#aboutPage" onclick="getPageFromLink('aboutPage')">About</a>
+                <a href="#homePage" onclick="getPageFromLink('campaignPage')"">Home</a>
+                <a href=" #aboutPage" onclick="getPageFromLink('aboutPage')">About</a>
                 <a href="#donatePage" onclick="getPageFromLink('donatePage')">Donate</a>
                 <a href="#volunteer" onclick="getPageFromLink('volunteerPage')">Volunteer</a>
 
@@ -48,7 +48,146 @@
 
 
     <main>
-        <section id="aboutPage">
+
+        <section class="campaignPage" id="campaignPage">
+            <section class="campaign-landing-page">
+                <img src="assets/image/turtle.webp" alt="Turtle" class="turtle-img" />
+
+                <img class="say_no_to_headstarting_img scroll-fade" src="assets/image/say_no_to_headstarting!.webp"
+                    alt="say no to headstarting">
+
+                <video controls class="scroll-fade">
+
+                    <source src="assets/video/campaign-video.mp4" type="video/mp4">
+
+                </video>
+
+                <p class="campaign-description font-size scroll-fade">
+                    Yayasan Penyu Indonesia (YPI) berkomitmen dalam program edukasi lingkungan dengan
+                    mengembangkan pendekatan yang dapat memberikan pengalaman dan pengetahuan utuh tentang
+                    perlindungan penyu tanpa mengganggu siklus alami kehidupannya.
+                </p>
+            </section>
+
+            <section class="gallery">
+                <h2 class="gallery-title title font-size scroll-fade">
+                    <span>MELINDUNGI PENYU LEBIH DARI SEKEDAR</span>
+                    <span class="yellow">RILIS TUKIK,</span>
+                    <span>INI KEGIATAN SERU LAIN YANG BISA KAMU LAKUKAN!</span>
+                </h2>
+                <img src="assets/image/gallery.webp" alt="Gallery Image 1" class="gallery-image scroll-fade">
+            </section>
+
+            <section class="penyu-facts">
+                <div class="penyu-facts-title">
+                    <h1>
+                        <span class="title font-siz scroll-fade">TUKIK MUNGIL</span>
+                        <span class="title font-size scroll-fade style=" padding-left: 2rem;">YANG TANGGUH</span>
+                    </h1>
+
+                    <p class="campaign-description font-size scroll-fade">Tukik atau bayi penyu yang baru saja menetas
+                        memang kecil
+                        dan lucu,
+                        tapi mereka tidak lemah.
+                        Mereka memiliki insting untuk sesegera mungkin menuju ke laut.</p>
+                </div>
+
+                <div class="penyu-facts-point scroll-fade">
+                    <ul>
+                        <li class=" campaign-description font-size scroll-fade">
+                            <img src="assets/image/turtle-small.webp" alt="icon">
+                            <p>Dalam satu sarang, tukik akan menetas bersama lalu pergi ke
+                                laut bersama pula</p>
+                        </li>
+
+                        <li class="campaign-description font-size scroll-fade">
+                            <img src="assets/image/many-turtle-small.webp" alt="icon">
+                            <p>Tukik memiliki insting untuk berenang gila-gilaan (swimming
+                                frenzy) yang dapat membuatnya
+                                terhindar dari predator</p>
+
+                        </li>
+                        <li class="campaign-description font-size scroll-fade">
+                            <img src="assets/image/egg-small.webp" alt="icon">
+                            <p>Kuning telur yang ada dalam perut tukik mampu menjadi sumber
+                                energi terbaik untuk hari hari
+                                pertamanya</p>
+                        </li>
+                    </ul>
+                </div>
+
+            </section>
+
+            <section class="headstarting-facts">
+                <div class="content-wrapper">
+                    <h1 class="facts-heading font-size title scroll-fade">
+                        DIPERKIRAKAN HANYA 1 DARI<br>
+                        1000 TUKIK* YANG BERHASIL HIDUP
+                    </h1>
+
+                    <div class="grid-wrapper">
+                        <div class="text-box font-size scroll-fade">
+                            <p>1. Fakta ini mungkin saja menimbulkan kekhawatiran, tetapi sebenarnya merupakan dinamika
+                                alami yang penting dalam menjaga keseimbangan rantai makanan.</p>
+                        </div>
+                        <div class="text-box font-size scroll-fade">
+                            <p>2. Pemeliharaan tukik dalam bak/fasilitas terbatas atau “headstarting” bukanlah solusi
+                                untuk
+                                melindunginya. Metode ini justru dapat menimbulkan risiko sendiri.</p>
+                        </div>
+                        <div class="text-box font-size scroll-fade">
+                            <p>3. Penyu telah bertahan selama ratusan juta tahun melalui siklus hidup alaminya. Salah
+                                satu
+                                ancaman utama bagi populasinya kini adalah eksploitasi, perburuan, dan perdagangan
+                                ilegal.</p>
+                        </div>
+                        <div class="text-box font-size scroll-fade">
+                            <p>4. Penyu dan tukik berhak mendapatkan peluang dan kualitas hidup terbaiknya melalui
+                                perlindungan di habitat asli yang sesuai dengan siklus hidup alami mereka.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="headstarting-facts-bottom">
+                    <img src="assets/image/anti_headstarting_background_2.webp" alt="anti_headstarting_background_2">
+                </div>
+            </section>
+
+            <section class="anti-headstarting-page">
+                <div class="img-turtle scroll-fade">
+                    <img src="assets/image/turtle_kid.webp" alt="turtle image ">
+                </div>
+
+                <div class="anti-headstarting-content">
+                    <img class="scroll-fade" src="assets/image/anti_headstarting_content_title.webp"
+                        alt="anti headstarting title">
+
+                    <ul>
+                        <li class="scroll-fade">
+                            <p>Diet (makanan) yang tidak sesuai</p>
+                        </li>
+                        <li class="scroll-fade">
+                            <p>Kepadatan bak menyebabkan tukik saling gigit dan rentan terkena penyakit</p>
+                        </li>
+                        <li class="scroll-fade">
+                            <p>Mengganggu proses imprinting (merekam lingkungan sekitar untuk dapat kembali)</p>
+                        </li>
+                    </ul>
+
+                    <div class="say-no-to-headstarting scroll-fade">
+                        <p class="say-no-to-headstarting-title scroll-fade">SAY NO TO HEADSTARTING</p>
+                        <p class="say-no-to-headstarting-description scroll-fade">Jangan mendukung atau terlibat dalam
+                            kegiatan
+                            pelepasan tukik yang ditahan dan dipelihara
+                            dalam bak/fasilitas terbatas.</p>
+                    </div>
+                </div>
+
+                <div></div>
+
+            </section>
+        </section>
+
+        <section id="aboutPage" style="display: none;">
             <section class="about-landing-page">
                 <h1>Yayasan Penyu Indonesia</h1>
             </section>
@@ -100,15 +239,15 @@
                 </div>
 
                 <div class="program-location-content scroll-fade">
-                    <img class="location-img">
+                    <img class="location-img" alt="location-img">
 
                     <div class="program-location-button-list scroll-fade">
                         <div class="location-button">
-                            <button class="sumatra-button" onclick="locationButtonOnclick('sumatra')"
+                            <button type="button" class="sumatra-button" onclick="locationButtonOnclick('sumatra')"
                                 style=" width: 150px; height: 40px;">Sumatra</button>
-                            <button class="sulawesi-button" onclick="locationButtonOnclick('sulawesi')"
+                            <button type="button" class="sulawesi-button" onclick="locationButtonOnclick('sulawesi')"
                                 style="width: 150px; height: 40px;">Sulawesi</button>
-                            <button class="bali-button" onclick="locationButtonOnclick('bali')"
+                            <button type="button" class="bali-button" onclick="locationButtonOnclick('bali')"
                                 style="width: 150px; height: 40px;">Bali</button>
 
                         </div>
